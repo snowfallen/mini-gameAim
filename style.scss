@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Khula&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: 'Khula', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+  align-items: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #16D9E3;
+}
+
+.start {
+  font-size: 1.5rem;
+}
+.again{
+    padding: 20px;
+    font-size: 1.5rem;
+    font-family:'Khula', sans-serif;;
+}
+h1 {
+  line-height: 1.4;
+  font-size: 4rem;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: all 1s ease-out;
+  background: linear-gradient(90deg, #834343 40%, #486349 100%);
+  background-size:200%;
+  animation-name: bgc;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  @keyframes bgc {
+    0%{
+    background-position: 0 50%;
+    }
+    50%{
+    background-position: 100% 50%;
+    }
+    100%{
+       background-position: 0 50%;
+    } 
+  }
+  h3{
+    span{
+      padding: 0 0 0 10px;
+    }
+  }
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+
+.time-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.time-list li {
+  margin: 10px;
+}
+
+.time-btn {
+  background-color: transparent;
+  border: 2px solid #C0C0C0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.time-btn:hover {
+  border: 2px solid #16D9E3;
+  color: #16D9E3;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.primary {
+  color: #16D9E3;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(118.38deg, #29323C -4.6%, #485563 200.44%);
+  box-shadow: -8px -8px 20px #2A333D, 10px 7px 20px #475462;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.circle {
+  background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media(max-width:768px){
+  #board{
+    width: 95%;
+    height: 500px;
+  }
+}
+
